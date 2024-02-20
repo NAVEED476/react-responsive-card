@@ -10,6 +10,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import Gallery from "./Pages/Gallery";
+import NavbarRoutes from "./components/NavbarRoutes";
 
 const routes = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const routes = createBrowserRouter([
     element: <Listing />,
   },
   {
-    element: <Navbar />,
+    element: <NavbarRoutes />,
     children: [
       {
         path: "/about",
