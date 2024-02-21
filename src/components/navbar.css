@@ -1,41 +1,94 @@
-.nav-cont{
-    width: 100%;
-    height: 80px;
-    border: 1px solid black;
-    background:rgb(206, 198, 184);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+.nav-cont {
+  width: 100%;
+  height: 80px;
+  background: rgb(206, 198, 184);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo-cont{
-    width: 50px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
+.logo-cont {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
 }
 
-.logo-img{
-    width: 50px;
-    height: 50px;
-    
+.logo-img {
+  width: 50px;
+  height: 50px;
 }
-.nav-links{
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+}
+.nav-link:hover {
+  color: blue;
+}
+
+.menu {
+  height: 2rem;
+  width: 2rem;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  top: 1.5rem;
+  right: 1rem;
+  position: absolute;
+}
+
+.menu span {
+  width: 100%;
+  height: 0.8rem;
+  background: black;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-cont {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .logo-cont {
+    margin: 15px;
+  }
+  .menu {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    margin-top: -0px;text-align: center;
+  }
+  .nav-link {
+    margin-bottom: -40px;
+    width: 100%;
+   
+    background: rgb(115, 134, 134);
+  }
+
+  .nav-links ul.open {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-}
-.nav-link{
-    text-decoration: none;
-    font-size: 18px;
-}
-.nav-link:hover{
-    color: blue;
+  }
+  .nav-links {
+    transition: transform 1s ease;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: -40px;
+    right: 1rem;
+  }
 }

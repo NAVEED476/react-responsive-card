@@ -1,8 +1,12 @@
 import React from 'react'
+import Card from '../components/Card'
+import "./gallery.css"
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div className='gallery-cont'>
+      <Card/>
+    </div>
   )
 }
 
